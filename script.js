@@ -39,10 +39,21 @@ function convertHex() {
 function copyDecimal() {
     const text = document.getElementById("decimalOutput").value;
     navigator.clipboard.writeText(text);
+    showToast("Decimal copied!");
 }
-
 
 function copyBinary() {
     const text = document.getElementById("binaryOutput").value;
     navigator.clipboard.writeText(text);
+    showToast("Binary copied!");
+}
+
+function showToast(message) {
+    const toast = document.getElementById("toast");
+    toast.textContent = message;
+    toast.classList.add("show");
+
+    setTimeout(() => {
+        toast.classList.remove("show");
+    }, 1000);
 }

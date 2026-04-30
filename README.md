@@ -1,15 +1,18 @@
 # Hex Converter
 
-A simple web app that converts hexadecimal numbers into **decimal (base 10)** and **binary (base 2)**.
+A simple web app that converts **hexadecimal (base 16)** numbers into **decimal (base 10)** and **binary (base 2)**.
 
 ---
 
 ## Features
-- Convert Hex → Decimal
-- Convert Hex → Binary
-- Live digit count for outputs
-- Input validation (only valid hex characters allowed)
-- Expandable input and output boxes
+- Live conversion  
+  - Hex → Decimal  
+  - Hex → Binary  
+
+- Live digit count for outputs  
+- Input validation (only valid hex characters allowed)  
+- Expandable input and output boxes  
+- Copy function with animation  
 
 ---
 
