@@ -16,7 +16,7 @@ textarea {
     padding: 10px;
     border: none;
     border-radius: 8px;
-    resize: vertical;      /* 👈 allows manual vertical expand */
+    resize: vertical;
     box-sizing: border-box;
     margin-bottom: 10px;
     font-family: Arial, sans-serif;
@@ -47,9 +47,6 @@ button:hover{
     background: #0d99d9;
 }
 
-
-
-
 .conversion_container {
     border: 2px solid #0d99d9;
     border-radius: 12px;
@@ -58,7 +55,7 @@ button:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 350px;
+    width: 500px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -76,8 +73,6 @@ button:hover{
     padding: 10px;
     border-radius: 8px;
 }
-
-
 
 .input, .output {
     width: 100%;

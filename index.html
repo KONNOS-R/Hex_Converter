@@ -1,40 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Hex Converter</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-    <div class="outer_container">
-        <h1>Hex Converter</h1>
-
-        <div class="conversion_container">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hex Converter</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    
+    <body>
+        <div class="outer_container">
+            <h1>Hex Converter</h1>
         
-            <div class="input">
-                <textarea id="hexInput"
-                          placeholder="Enter hex number"
-                          onkeydown="if(event.key === 'Enter') convertHex()"></textarea>
+            <div class="conversion_container">
             
-                <button onclick="convertHex()">Convert</button>
-            </div>
-        
-            <div class="output">
-                <label>Decimal</label>
-                <textarea id="decimalOutput" readonly></textarea>
+                <div class="input">
+                    <textarea id="hexInput"
+                              placeholder="Enter hex number"
+                              onkeydown="if(event.key === 'Enter') convertHex()"></textarea>
+                
+                    <button onclick="convertHex()">Convert</button>
+                </div>
             
-                <label>Binary</label>
-                <textarea id="binaryOutput" readonly></textarea>
+                <div class="output">
+                    <label>Decimal (<span id="decimalCount">0</span> digits)</label>
+                    <textarea id="decimalOutput" readonly></textarea>
+                
+                    
+                    <label>Binary (<span id="binaryCount">0</span> digits)</label>
+                    <textarea id="binaryOutput" readonly></textarea>
+                </div>
+            
             </div>
-        
         </div>
-    </div>
-
-    <script src="script.js"></script>
-
-
-</body>
-
+    
+        <script src="script.js"></script>
+    </body>
 </html>
 
