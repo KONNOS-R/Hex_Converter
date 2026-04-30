@@ -10,24 +10,20 @@
     <div class="outer_container">
         <h1>Hex Converter</h1>
 
-        <div class="convertion_container">
+        <div class="conversion_container">
+            <div class="input">
+                <input type="text" id="hexInput" placeholder="Enter hex number" autocomplete="off" onkeydown="if(event.key === 'Enter') convertHex()">
+                <button onclick="convertHex()">Convert</button>
+            </div>
 
-        <input type="text" id="hexInput" placeholder="Enter hex number" />
-
-        <button onclick="convertHex()">Convert</button>
-
-        <div class="output">
-            <p><strong>Decimal:</strong> <span id="decimalOutput">-</span></p>
-            <p><strong>Binary:</strong> <span id="binaryOutput">-</span></p>
-        </div>
-
+            <div class="output">
+                <p><strong>Decimal:</strong> <span id="decimalOutput">-</span></p>
+                <p><strong>Binary:</strong> <span id="binaryOutput">-</span></p>
+            </div>
         </div>
     </div>
 
     <script src="script.js"></script>
-
-
-
 
 
 </body>

@@ -1,10 +1,52 @@
-body {
-  font-family: Arial, sans-serif;
-  background: #0f172a;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+body{
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+    text-align: center;
 }
 
+h1{
+    text-align: center;
+    font-weight: bold;
+}
+
+
+input{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+}
+
+button{
+    padding: 10px;
+    width: 100%;
+    border: none;
+    background: #38bdf8;
+    color: black;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover{
+    background: #0ea5e9;
+}
+
+.conversion_container {
+    border: 2px solid #0ea5e9;
+    border-radius: 12px;
+    padding: 20px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+
+
+
+.output{
+    margin-top: 15px;
+}
