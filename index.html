@@ -5,34 +5,80 @@
         <title>Hex Converter</title>
         <link rel="stylesheet" href="style.css">
     </head>
-    
+
     <body>
         <div class="outer_container">
             <h1>Hex Converter</h1>
-        
-            <div class="conversion_container">
-            
-                <div class="input">
-                    <textarea id="hexInput"
-                              placeholder="Enter hex number"
-                              onkeydown="if(event.key === 'Enter') convertHex()"></textarea>
+
+            <div class="containers_wrapper">
+                <div class="inner_container">
                 
-                    <button onclick="convertHex()">Convert</button>
-                </div>
-            
-                <div class="output">
-                    <label>Decimal (<span id="decimalCount">0</span> digits)</label>
-                    <textarea id="decimalOutput" readonly></textarea>
+                    <div class="input">
+                        <textarea id="hexInput"
+                                  placeholder="Enter hex number"
+                                  rows="5"
+                                  onkeydown="if(event.key === 'Enter') convertHex()"
+                                  ></textarea>
+                        
+                        <button onclick="convertHex()">Convert</button>
+                    </div>
                 
+                    <div class="output">
+                        <label>Decimal (<span id="decimalCount">0</span> digits)</label>
+                        <textarea id="decimalOutput" readonly></textarea>
                     
-                    <label>Binary (<span id="binaryCount">0</span> digits)</label>
-                    <textarea id="binaryOutput" readonly></textarea>
+
+                        <label>Binary (<span id="binaryCount">0</span> digits)</label>
+                        <textarea id="binaryOutput" readonly></textarea>
+                    </div>
+                
                 </div>
-            
-            </div>
+
+                <div class="inner_container">
+                
+                    <h2>How Hex Conversion Works</h2>
+
+                    <ul>
+                        <li>
+                            <strong>What is Hexadecimal (Base 16)?</strong><br>
+                            Hex uses 16 symbols: 0–9 and A–F.<br>
+                            Each letter represents a value:<br>
+                            A = 10, B = 11, C = 12, D = 13, E = 14, F = 15.
+                        </li>
+                        <br>
+                        <li>
+                            <strong>Hex → Decimal (Base 10)</strong><br>
+                            Step 1: Start from the right side of the number.<br>
+                            Step 2: Multiply each digit by 16 raised to its position (starting at 0).<br>
+                            Step 3: Add all results together.
+                            <br><br>
+                            Example:<br>
+                            1A3 = (1 × 16²) + (10 × 16¹) + (3 × 16⁰)<br>
+                            = 256 + 160 + 3 = <strong>419</strong>
+                        </li>
+                        <br>
+                        <li>
+                            <strong>Hex → Binary (Base 2)</strong><br>
+                            Step 1: Take each hex digit separately.<br>
+                            Step 2: Convert each digit into its 4-bit binary value.<br>
+                            Step 3: Join all binary groups together.
+                            <br><br>
+                            Example:<br>
+                            1 = 0001<br>
+                            A = 1010<br>
+                            3 = 0011<br>
+                            So: 1A3 = <strong>0001 1010 0011</strong>
+                        </li>
+                        <br>
+                        <li>
+                            <strong>Quick Rules</strong><br>
+                            • Decimal conversion = sum of (digit × power of 16)<br>
+                            • Binary conversion = 4-bit lookup per hex digit
+                        </li>
+                    </ul>
+                </div>
         </div>
-    
+
         <script src="script.js"></script>
     </body>
 </html>
-

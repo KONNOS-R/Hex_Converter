@@ -43,11 +43,23 @@ button{
     cursor: pointer;
 }
 
+ul{
+    text-align: left;
+}
+
 button:hover{
     background: #0d99d9;
 }
 
-.conversion_container {
+.containers_wrapper {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.inner_container {
     border: 2px solid #0d99d9;
     border-radius: 12px;
     padding: 30px;
@@ -55,7 +67,7 @@ button:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 500px;
+    width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
