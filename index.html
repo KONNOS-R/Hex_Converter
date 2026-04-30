@@ -11,15 +11,23 @@
         <h1>Hex Converter</h1>
 
         <div class="conversion_container">
+        
             <div class="input">
-                <input type="text" id="hexInput" placeholder="Enter hex number" autocomplete="off" onkeydown="if(event.key === 'Enter') convertHex()">
+                <textarea id="hexInput"
+                          placeholder="Enter hex number"
+                          onkeydown="if(event.key === 'Enter') convertHex()"></textarea>
+            
                 <button onclick="convertHex()">Convert</button>
             </div>
-
+        
             <div class="output">
-                <p><strong>Decimal:</strong> <span id="decimalOutput">-</span></p>
-                <p><strong>Binary:</strong> <span id="binaryOutput">-</span></p>
+                <label>Decimal</label>
+                <textarea id="decimalOutput" readonly></textarea>
+            
+                <label>Binary</label>
+                <textarea id="binaryOutput" readonly></textarea>
             </div>
+        
         </div>
     </div>
 
